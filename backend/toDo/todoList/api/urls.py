@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import ListSerializer
+from .views import messageListView
 
 urlpatterns = [
-    path('', listSerializer.as_view()),
+    path('', messageListView.as_view()),
 ]

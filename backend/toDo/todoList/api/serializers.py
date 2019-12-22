@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from todoList.models import todoList 
+from todoList.models import ToDoList 
 
 class listSerializer(serializers.ModelSerializer):
     class Meta:
-        model = todoList
-        fields = ('message')
+        model = ToDoList
+        fields = ('__all__')
