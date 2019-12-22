@@ -1,12 +1,16 @@
 import React from 'react';
 
-const Message = (props) => {
-
-    return(
-        <div>
-            <h1>{props.data.message}</h1>
-        </div>
-    )
+class Message extends React.Component{
+    render() {
+        return(
+            <tr>
+                <th>{this.props.data.message}</th>
+                <th>
+                    <button type="button" onClick={this.props.remove.bind(this, this.props.data)}>Remove</button>
+                </th>
+            </tr>
+        )
+    }
 }
 
 export default Message;
