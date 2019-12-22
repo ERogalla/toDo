@@ -1,4 +1,4 @@
-from rest_framework.generics import ListAPIView, CreateAPIView
+from rest_framework.generics import ListAPIView, CreateAPIView, DestroyAPIView
 from todoList.models import ToDoList
 from .serializers import listSerializer
 
@@ -9,3 +9,8 @@ class messageListView(ListAPIView):
 class postMessageView(CreateAPIView):
     serializer_class = listSerializer
     queryset = ToDoList.objects.all()
+
+class removeMessageView(DestroyAPIView):
+    serializer_class = listSerializer
+    queryset = ToDoList.objects.all()
+    
